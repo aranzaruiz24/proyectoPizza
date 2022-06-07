@@ -98,6 +98,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "proyectoFinal:build:production",
+            "firebaseProject": "proyecto-pizza-4a505",
+            "firebaseHostingSite": "proyecto-pizza-4a505"
+          }
         }
       }
     }

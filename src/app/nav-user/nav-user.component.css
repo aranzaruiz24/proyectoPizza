@@ -1,0 +1,13 @@
+.mynav{
+    background-color: rgb(30,30,30);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-link{
+    color: white;
+    font-family: fantasy;
+}

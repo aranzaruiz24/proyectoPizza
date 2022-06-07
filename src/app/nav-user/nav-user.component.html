@@ -1,0 +1,28 @@
+<nav class="mynav">
+
+    <a class="navbar-brand" href="#">
+      <img src="../../assets/img/vector-pizzeria-logo-template.webp" width="180" height="" class="d-inline-block align-top" alt="">
+    </a>
+  
+  
+    <div id="navbarNav">
+      <ul class="navbar-nav ulmenu">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/mainUser">Bienvenido {{usuario.nombre  | letras:true}}</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/pedido">Pedido</a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/mispedidos">Mis Pedidos</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" (click)="salir()" routerLink="/login">Cerrar Sesion
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>

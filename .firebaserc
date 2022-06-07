@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "proyecto-pizza-4a505"
+  },
+  "targets": {
+    "proyecto-pizza-4a505": {
+      "hosting": {
+        "proyectoFinal": [
+          "proyecto-pizza-4a505"
+        ]
+      }
+    }
+  }
+}

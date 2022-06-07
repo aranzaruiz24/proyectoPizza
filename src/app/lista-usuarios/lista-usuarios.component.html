@@ -1,0 +1,56 @@
+<app-nav-root></app-nav-root>
+<div class="table">
+<table class="table table-striped">
+    <thead>
+      <tr  class="bg-dark">
+        <th >Nombre</th>
+        <th >Pizza</th>
+        <th >Precio</th>
+        <th >Tamaño</th>
+        <th >Direccion</th>
+        <th >CP</th>
+        <th >Codigo QR</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-warning" *ngFor="let usuario of usuarios">
+        <td>{{usuario.nombre | letras:true}}</td>
+        <td>{{usuario.apellido| letras:true}}</td>
+        <td>{{usuario.email}}</td>
+        <td>{{usuario.password }}</td>
+        <td>{{usuario.telefono }}</td>
+        <td><button (click)="editar(usuario)">Editar</button></td>
+        <td><button (click)="eliminar(usuario)">Eliminar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="form">
+
+
+  <form  (ngSubmit)="actualizar()">
+    <div class="">
+        <label class="form-label">Nombre</label>
+        <input name="nombre" type="text" class="form-control"  [(ngModel)]="usuario.nombre">
+    </div>
+    <div class="">
+        <label class="form-label">Apellido</label>
+        <input name="apellido" type="text" class="form-control"  [(ngModel)]="usuario.apellido">
+    </div>
+    <div class="">
+        <label class="form-label" >Correo</label>
+        <input name="email" type="email" class="form-control" [(ngModel)]="usuario.email" disabled="">
+    </div>
+    <div class="">
+        <label class="form-label">Constraseña</label>
+        <input name="password" type="password" class="form-control"[(ngModel)]="usuario.password" >
+    </div>
+    <div class="">
+        <label class="form-label">Telefono</label>
+        <input name="telefono" type="text" class="form-control"  maxlength="13" [(ngModel)]="usuario.telefono">
+    </div>
+    <button class="btn btn-success" type="submit">Actualizar</button>
+</form>
+
+</div>

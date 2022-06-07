@@ -1,0 +1,58 @@
+.mydiv{
+    display: flex;
+}
+
+.mainNav{
+    width: 22vw;
+    height: 100%;
+}
+
+.row{
+    width:  79vw;
+    height: 100vh;
+    background-image: url(../../assets/img/img1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 0 100px;
+}
+
+.card{
+    height: 190px;
+    background-color: black;
+    padding: 5px;
+}
+h5,h2,h3{
+    color: rgb(233,187,25);   
+}
+h3{
+    background-color: black;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px){
+    .mydiv{
+        display: flex;
+        flex-direction: column;
+    }
+    .mainNav{
+        width: 100vw;
+    }
+    .row{
+        width: 100vw;
+        height: 100%;
+        padding: 25px 50px;
+        background-image: url(../../assets/img/img1.jpg);
+        background-size: cover;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        margin: 0;
+
+    }
+    .card{
+        height: 250px;
+        background-color: black;
+    }
+}

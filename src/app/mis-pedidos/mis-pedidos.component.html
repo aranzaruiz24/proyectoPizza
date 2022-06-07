@@ -1,0 +1,37 @@
+<div class="mydiv">
+    <app-nav-user [usuario]="usuarioActual"></app-nav-user>
+
+    <div class="row">
+      <app-loading *ngIf="loading"></app-loading>
+        <table *ngIf="!loading" class="">
+            <thead>
+              <tr  class="bg-dark">
+                <th >Nombre</th>
+                <th >Pizza</th>
+                <th >Precio</th>
+                <th >Tamaño</th>
+                <th >Direccion</th>
+                <th >CP</th>
+                <th >Codigo QR</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-warning" *ngFor="let pedido of pedidos">
+                <td>{{this.nombre | letras:true}}</td>
+                <td>{{pedido.nombrePizza}}</td>
+                <td>{{pedido.precio}}</td>
+                <td>{{pedido.tamano  | letras:true}}</td>
+                <td>{{pedido.direccion  | letras:true}}</td>
+                <td>{{pedido.cp}}</td>
+                <td><button (click)="codigo(pedido)">Generar QR</button></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+
+<div class="qr" [hidden]="bandera">
+    <qr-code [value]="qrInfo" [size]="size"></qr-code>
+    <button class="btn btn-success" (click)="bandera=true">Listo!</button>
+</div>

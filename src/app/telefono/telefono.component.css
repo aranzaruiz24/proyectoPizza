@@ -1,0 +1,87 @@
+.mydiv{
+    display: flex;
+}
+
+.mainNav{
+    width: 25vw;
+    height: 100%;
+}
+
+.row{
+    width: 85vw;
+    height: 100vh;
+    background-image: url(../../assets/img/img1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.phone{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.telefono {
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
+h1{
+    color: rgb(233,187,25);
+
+}
+.form-label{
+    color: rgb(233,187,25);
+    font-family: fantasy;
+    font-size: 18px;
+}
+.form-control{
+    opacity: 0.85;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    width: 300px;
+    margin:5px;
+}
+button{
+    width: 200px;
+    margin: 10px;
+}
+label{
+    color: rgb(233,187,25);
+    font-family: fantasy;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px){
+    .mydiv{
+        display: flex;
+        flex-direction: column;
+    }
+    .mainNav{
+        width: 100vw;
+    }
+    .row{
+        width: 100vw;
+        height: 100%;
+        padding: 25px 50px;
+        background-image: url(../../assets/img/img1.jpg);
+        background-size: cover;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        margin: 0;
+
+    }
+    form > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}

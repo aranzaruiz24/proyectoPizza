@@ -1,0 +1,16 @@
+<app-nav-root></app-nav-root>
+
+<div class="main">
+    <div>
+      <h2>Grafico de Barras</h2>
+    </div>
+    
+    <div>
+      <canvas baseChart
+        [datasets] = "barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [type]="barChartType">
+  </canvas>
+</div>
+</div>

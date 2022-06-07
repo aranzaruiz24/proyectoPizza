@@ -1,0 +1,63 @@
+<div class="mydiv">
+<app-nav-main class="myNav"> </app-nav-main>
+
+<div class="row">
+    <form [formGroup]="formulario" (ngSubmit)="registrar()">
+        <div class="">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" formControlName="nombre">
+            <span *ngIf="this.formulario.get('nombre')?.errors?.['required']">
+                (El nombre no puede quedar vacío)
+            </span>
+            <span *ngIf="this.formulario.get('nombre')?.errors?.['minlength']">
+                (Debe tener como mínimo 5 caracteres)
+            </span>
+        </div>
+        <div class="">
+            <label class="form-label">Apellido</label>
+            <input type="text" class="form-control" formControlName="apellido">
+            <span *ngIf="this.formulario.get('apellido')?.errors?.['required']">
+                (El apellido no puede quedar vacío)
+            </span>
+            <span *ngIf="this.formulario.get('apellido')?.errors?.['minlength']">
+                (Debe tener como mínimo 5 caracteres)
+            </span>
+        </div>
+        <div class="">
+            <label class="form-label">Correo</label>
+            <input type="email" class="form-control" formControlName="email" placeholder="alguien@example.com">
+            <span *ngIf="this.formulario.get('email')?.errors?.['required']">
+                (El mail no puede quedar vacío)
+              </span>
+              <span *ngIf="this.formulario.get('email')?.errors?.['email']">
+                (El mail no es válido)
+              </span>
+        </div>
+        <div class="">
+            <label class="form-label">Constraseña</label>
+            <input type="password" class="form-control" formControlName="password" placeholder="Contraseña123">
+            <span *ngIf="this.formulario.get('password')?.errors?.['required']">
+                (El password no puede quedar vacío)
+            </span>
+            <span *ngIf="this.formulario.get('password')?.errors?.['minlength']">
+                (Debe tener como mínimo 8 caracteres)
+            </span>
+        </div>
+        <div class="">
+            <label class="form-label">Telefono</label>
+            <input type="text" class="form-control" formControlName="telefono" placeholder="52-449-123-4567">
+            <span *ngIf="this.formulario.get('telefono')?.errors?.['required']">
+                (El telefono no puede quedar vacío)
+            </span>
+            <span *ngIf="this.formulario.get('telefono')?.errors?.['minlength']">
+                (Debe tener 12 caracteres)
+            </span>
+            <span *ngIf="this.formulario.get('telefono')?.errors?.['maxlength']">
+                (Debe tener 12 caracteres)
+            </span>
+        </div>
+        <button class="btn btn-success" type="submit">Registrarse</button>
+    </form>
+</div>
+
+</div>

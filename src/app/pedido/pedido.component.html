@@ -1,0 +1,42 @@
+<div class="mydiv">
+<app-nav-user class="mainNav" [usuario]="usuarioActual"></app-nav-user>
+
+<div class="row">
+    <div class="menu">
+        <label class="form-label">Eliga su pizza</label>
+        <div class="card-columns">
+            <div class="card" *ngFor="let pizza of pizzas, let i=index">
+              <img src={{pizza.img}} class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{pizza.nombre}}</h5>
+                <p class="card-text"><small class="text-muted">Precios: {{pizza.precio[0]}},{{pizza.precio[1]}},{{pizza.precio[2]}}</small></p>
+                <p class="card-text "> {{pizza.detalles}}</p>
+              </div>
+              <button type="menu" (click)="selectPizza(pizza.nombre,i)" class="mb-3 btn btn-outline-warning ">Seleccionar</button>
+            </div>
+          </div>
+    </div>
+    <form [formGroup]="formulario" (ngSubmit)="agregarPedido()">
+
+        <div class="">
+            <label class="form-label">Tamaño</label>
+            <select name="" id="" formControlName="tamano">
+                <option value="chica">CH</option>
+                <option value="mediana">MD</option>
+                <option value="grande">GR</option>
+            </select>
+
+        </div>
+        <div class="">
+            <label class="form-label">Direccion</label>
+            <input type="text" class="form-control" formControlName="direccion">
+        </div>
+        <div class="">
+            <label class="form-label">Codigo Postal</label>
+            <input type="text" class="form-control" formControlName="cp">
+        </div>
+        <button class="btn-outline-warning" type="submit">Enviar</button>
+    </form>
+</div>
+
+</div>

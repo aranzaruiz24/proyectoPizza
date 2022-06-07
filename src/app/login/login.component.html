@@ -1,0 +1,31 @@
+<div class="mydiv">
+
+<app-nav-main class="myNav"> </app-nav-main>
+
+
+<div class="row ">
+    <form class="" [formGroup]="formulario" (ngSubmit)="ingresar()">
+        <div class="">
+            <label class="form-label">Correo</label>
+            <input type="email" class="form-control" formControlName="email">
+        </div>
+        <div class="">
+            <label class="form-label">Constraseña</label>
+            <input type="password" class="form-control" formControlName="password">
+        </div>
+        <div class="">
+            <label class="form-label">Repite tu contraseña</label>
+            <input type="password" class="form-control" formControlName="password2">
+        </div>
+        <div style="color: red;">{{resultado}}</div>
+        <button class="btn btn-success" type="submit">Enviar</button>
+    </form>
+    <div>
+        <button class="btn btn-outline-warning" routerLink="/telefono">Ingresar Via Celular</button>
+    </div>
+    <div >
+        <button class="btn btn-outline-warning" routerLink="/registro">Registrarse</button>
+    </div>
+</div>
+
+</div>

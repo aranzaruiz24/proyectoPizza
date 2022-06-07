@@ -1,0 +1,21 @@
+<div class="mydiv">
+
+
+    <app-nav-main class="mainNav"> </app-nav-main>
+
+    <div class="row">
+
+        <h2>Disfruta de las mejoras pizzas de Aguascalientes</h2>
+        <div class="card-columns">
+            <a routerLink="/login">      
+                <div class="card" *ngFor="let pizza of pizzas, let i=index">
+                    <img src={{pizza.img}} class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">{{pizza.nombre}}</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <h3>"Hemos convertido nuestra pasión en nuestra profesión"</h3>
+    </div>
+</div>

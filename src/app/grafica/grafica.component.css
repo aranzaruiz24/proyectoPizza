@@ -1,0 +1,9 @@
+.main{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+canvas{
+        width: 650px;
+}
